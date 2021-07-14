@@ -32,7 +32,10 @@ namespace Bougle.French.Glaff.Web.Controllers
         [ProducesResponseType(typeof(GlaffEntryDto), 200)]
         public IActionResult GetEntry([FromRoute] int entryId)
         {
-            var entry = _context.Entries.Single(e => e.Id == entryId);
+            var entry = _context.Entries.SingleOrDefault(e => e.Id == entryId);
+            if (entry == null)
+                return NotFound($"Entry not found for ID [{entryId}].");
+
             var dto = ToDto(entry);
             return Ok(dto);
         }

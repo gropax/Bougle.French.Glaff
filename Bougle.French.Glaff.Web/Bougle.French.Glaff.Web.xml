@@ -6,10 +6,10 @@
     <members>
         <member name="M:Bougle.French.Glaff.Web.Controllers.EntriesController.GetEntry(System.Int32)">
             <summary>
-            Return the order with the given ID.
+            Return the entry with the given ID.
             </summary>
-            <response code="200">The order</response>
-            <response code="404">Order not found</response>
+            <response code="200">The entry</response>
+            <response code="404">Entry not found</response>
         </member>
     </members>
 </doc>
