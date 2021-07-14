@@ -35,10 +35,11 @@ namespace Bougle.French.Glaff.Cmd
 
         static void RunOptions(Options opts)
         {
-            Console.WriteLine($"Initializing Sqlite database [{opts.DbPath}]...");
+            var dbFullPath = Path.GetFullPath(opts.DbPath);
+            Console.WriteLine($"Initializing Sqlite database [{dbFullPath}]...");
 
             var options = new DbContextOptionsBuilder<GlaffDbContext>();
-            options.UseSqlite($@"Data Source={opts.DbPath}");
+            options.UseSqlite($@"Data Source={dbFullPath}");
             var dbContext = new GlaffDbContext(options.Options);
 
             bool d = dbContext.Database.EnsureDeleted();
@@ -49,16 +50,17 @@ namespace Bougle.French.Glaff.Cmd
 
             if (!string.IsNullOrWhiteSpace(opts.LexiconPath))
             {
-                if (!File.Exists(opts.LexiconPath))
+                var fullPath = Path.GetFullPath(opts.LexiconPath);
+                if (!File.Exists(fullPath))
                 {
-                    Console.WriteLine($"Glàff main lexicon file not found [{opts.LexiconPath}].");
+                    Console.WriteLine($"Glàff main lexicon file not found [{fullPath}].");
                     Environment.Exit(1);
                 }
 
                 Console.WriteLine($"Loading entries from Glàff main lexicon...");
 
                 int done = 0;
-                foreach (var batch in ParseMainLexicon(opts.LexiconPath).Batch(BATCH_SIZE))
+                foreach (var batch in ParseMainLexicon(fullPath).Batch(BATCH_SIZE))
                 {
                     dbContext.AddRange(batch);
                     dbContext.SaveChanges();
@@ -72,16 +74,17 @@ namespace Bougle.French.Glaff.Cmd
 
             if (!string.IsNullOrWhiteSpace(opts.OldiesPath))
             {
-                if (!File.Exists(opts.OldiesPath))
+                var fullPath = Path.GetFullPath(opts.OldiesPath);
+                if (!File.Exists(fullPath))
                 {
-                    Console.WriteLine($"Glàff oldies lexicon file not found [{opts.OldiesPath}].");
+                    Console.WriteLine($"Glàff oldies lexicon file not found [{fullPath}].");
                     Environment.Exit(1);
                 }
 
                 Console.WriteLine($"Loading entries from Glàff oldies lexicon...");
 
                 int done = 0;
-                foreach (var batch in ParseOldiesLexicon(opts.OldiesPath).Batch(BATCH_SIZE))
+                foreach (var batch in ParseOldiesLexicon(fullPath).Batch(BATCH_SIZE))
                 {
                     dbContext.AddRange(batch);
                     dbContext.SaveChanges();
