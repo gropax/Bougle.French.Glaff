@@ -21,4 +21,5 @@ RUN dotnet publish "Bougle.French.Glaff.Web.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY data/glaff.db /db/glaff.db
 ENTRYPOINT ["dotnet", "Bougle.French.Glaff.Web.dll"]
