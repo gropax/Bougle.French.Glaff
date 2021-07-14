@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bougle.French.Glaff.Storage;
+using System;
+using System.Linq;
 
 namespace Bougle.French.Glaff.Cmd
 {
@@ -6,7 +8,11 @@ namespace Bougle.French.Glaff.Cmd
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string dataSource = args.Single();
+            var dbContext = new GlaffDbContext($@"Data Source={dataSource}");
+
+            bool d = dbContext.Database.EnsureDeleted();
+            bool c = dbContext.Database.EnsureCreated();
         }
     }
 }
