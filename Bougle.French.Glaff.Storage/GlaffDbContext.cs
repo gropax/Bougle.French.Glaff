@@ -29,16 +29,9 @@ namespace Bougle.French.Glaff.Storage
 
     public class GlaffDbContext : DbContext
     {
-        private string _connectionString = "Data Source=glaff.db";
-
-        public GlaffDbContext() { }
-        public GlaffDbContext(string connectionString)
-        {
-            _connectionString = connectionString;
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite(_connectionString);
+        public GlaffDbContext(DbContextOptions<GlaffDbContext> options)
+            : base(options)
+        { }
 
         public DbSet<GlaffEntry> Entries { get; set; }
     }

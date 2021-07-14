@@ -1,5 +1,6 @@
 ﻿using Bougle.French.Glaff.Storage;
 using CommandLine;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -36,7 +37,9 @@ namespace Bougle.French.Glaff.Cmd
         {
             Console.WriteLine($"Initializing Sqlite database [{opts.DbPath}]...");
 
-            var dbContext = new GlaffDbContext($@"Data Source={opts.DbPath}");
+            var options = new DbContextOptionsBuilder<GlaffDbContext>();
+            options.UseSqlite($@"Data Source={opts.DbPath}");
+            var dbContext = new GlaffDbContext(options.Options);
 
             bool d = dbContext.Database.EnsureDeleted();
             bool c = dbContext.Database.EnsureCreated();
