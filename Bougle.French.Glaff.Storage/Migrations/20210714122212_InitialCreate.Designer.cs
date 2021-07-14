@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bougle.French.Glaff.Storage.Migrations
 {
     [DbContext(typeof(GlaffDbContext))]
-    [Migration("20210714094801_InitialCreate")]
+    [Migration("20210714122212_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -70,6 +70,9 @@ namespace Bougle.French.Glaff.Storage.Migrations
 
                     b.Property<string>("MorphoSyntax")
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("OldFashioned")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("SampaPronunciations")
                         .HasColumnType("TEXT");

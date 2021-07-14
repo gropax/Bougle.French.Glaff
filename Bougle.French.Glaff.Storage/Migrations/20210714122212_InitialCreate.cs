@@ -12,6 +12,7 @@ namespace Bougle.French.Glaff.Storage.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    OldFashioned = table.Column<bool>(type: "INTEGER", nullable: false),
                     GraphicalForm = table.Column<string>(type: "TEXT", nullable: true),
                     MorphoSyntax = table.Column<string>(type: "TEXT", nullable: true),
                     Lemma = table.Column<string>(type: "TEXT", nullable: true),

@@ -29,7 +29,7 @@ namespace Bougle.French.Glaff.Storage
 
     public class GlaffDbContext : DbContext
     {
-        private string _connectionString;
+        private string _connectionString = "Data Source=glaff.db";
 
         public GlaffDbContext() { }
         public GlaffDbContext(string connectionString)

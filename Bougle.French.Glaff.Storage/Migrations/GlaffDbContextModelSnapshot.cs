@@ -69,6 +69,9 @@ namespace Bougle.French.Glaff.Storage.Migrations
                     b.Property<string>("MorphoSyntax")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("OldFashioned")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("SampaPronunciations")
                         .HasColumnType("TEXT");
 
