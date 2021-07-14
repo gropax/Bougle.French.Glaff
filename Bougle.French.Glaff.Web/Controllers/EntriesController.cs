@@ -24,10 +24,10 @@ namespace Bougle.French.Glaff.Web.Controllers
         }
 
         /// <summary>
-        /// Return the order with the given ID.
+        /// Return the entry with the given ID.
         /// </summary>
-        /// <response code="200">The order</response>
-        /// <response code="404">Order not found</response>
+        /// <response code="200">The entry</response>
+        /// <response code="404">Entry not found</response>
         [HttpGet("{entryId}")]
         [ProducesResponseType(typeof(GlaffEntryDto), 200)]
         public IActionResult GetEntry([FromRoute] int entryId)

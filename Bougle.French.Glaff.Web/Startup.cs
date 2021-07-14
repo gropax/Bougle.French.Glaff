@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -32,6 +33,9 @@ namespace Bougle.French.Glaff.Web
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Bougle.French.Glaff.Web", Version = "v1" });
+
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Bougle.French.Glaff.Web.xml"));
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Bougle.French.Glaff.Contracts.xml"));
             });
 
             services.AddDbContext<GlaffDbContext>(

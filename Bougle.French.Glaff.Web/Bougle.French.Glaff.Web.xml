@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bougle.French.Glaff.Web</name>
+    </assembly>
+    <members>
+        <member name="M:Bougle.French.Glaff.Web.Controllers.EntriesController.GetEntry(System.Int32)">
+            <summary>
+            Return the order with the given ID.
+            </summary>
+            <response code="200">The order</response>
+            <response code="404">Order not found</response>
+        </member>
+    </members>
+</doc>

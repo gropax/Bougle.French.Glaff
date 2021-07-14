@@ -2,8 +2,14 @@
 
 namespace Bougle.French.Glaff.Contracts
 {
+    /// <summary>
+    /// Represent an single entry from the Glàff dataset.
+    /// </summary>
     public class GlaffEntryDto
     {
+        /// <summary>
+        /// Internal ID of the entry
+        /// </summary>
         public int Id { get; set; }
         public string GraphicalForm { get; set; }
         public string MorphoSyntax { get; set; }

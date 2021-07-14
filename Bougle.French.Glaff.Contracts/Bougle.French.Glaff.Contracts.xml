@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bougle.French.Glaff.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:Bougle.French.Glaff.Contracts.GlaffEntryDto">
+            <summary>
+            Represent an single entry from the Glàff dataset.
+            </summary>
+        </member>
+        <member name="P:Bougle.French.Glaff.Contracts.GlaffEntryDto.Id">
+            <summary>
+            Internal ID of the entry
+            </summary>
+        </member>
+    </members>
+</doc>
