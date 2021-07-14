@@ -2,7 +2,7 @@
   "profiles": {
     "Bougle.French.Glaff.Cmd": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\VR1\\source\\repos\\Bougle.French.Glaff\\Bougle.French.Glaff.Cmd\\glaff.db"
+      "commandLineArgs": "C:\\Users\\VR1\\source\\repos\\Bougle.French.Glaff\\Bougle.French.Glaff.Cmd\\glaff.db C:\\Users\\VR1\\source\\repos\\Bougle.French.Glaff\\Bougle.French.Glaff.Cmd\\glaff-1.2.2.txt C:\\Users\\VR1\\source\\repos\\Bougle.French.Glaff\\Bougle.French.Glaff.Cmd\\oldiesSubLexicon.txt"
     }
   }
 }

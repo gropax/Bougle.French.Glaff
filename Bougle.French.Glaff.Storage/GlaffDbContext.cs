@@ -6,6 +6,7 @@ namespace Bougle.French.Glaff.Storage
     public class GlaffEntry
     {
         public int Id { get; set; }
+        public bool OldFashioned { get; set; }
         public string GraphicalForm { get; set; }
         public string MorphoSyntax { get; set; }
         public string Lemma { get; set; }
