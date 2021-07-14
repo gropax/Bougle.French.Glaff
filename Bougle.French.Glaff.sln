@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bougle.French.Glaff.Web", "Bougle.French.Glaff.Web\Bougle.French.Glaff.Web.csproj", "{51CCF7D2-EB2B-4B13-9CFE-92CAF08844FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bougle.French.Glaff.Web", "Bougle.French.Glaff.Web\Bougle.French.Glaff.Web.csproj", "{51CCF7D2-EB2B-4B13-9CFE-92CAF08844FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bougle.French.Glaff.Client", "Bougle.French.Glaff.Client\Bougle.French.Glaff.Client.csproj", "{DDE9A6AA-3F6A-46A2-BE39-0FBB9A8D21B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bougle.French.Glaff.Client", "Bougle.French.Glaff.Client\Bougle.French.Glaff.Client.csproj", "{DDE9A6AA-3F6A-46A2-BE39-0FBB9A8D21B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bougle.French.Glaff.Contracts", "Bougle.French.Glaff.Contracts\Bougle.French.Glaff.Contracts.csproj", "{9FCB01DE-2506-458C-8F6F-7BF8D7C6F0C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bougle.French.Glaff.Contracts", "Bougle.French.Glaff.Contracts\Bougle.French.Glaff.Contracts.csproj", "{9FCB01DE-2506-458C-8F6F-7BF8D7C6F0C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bougle.French.Glaff.Storage", "Bougle.French.Glaff.Storage\Bougle.French.Glaff.Storage.csproj", "{E9A422E4-9962-4F09-A8BA-861BD0AD7042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bougle.French.Glaff.Storage", "Bougle.French.Glaff.Storage\Bougle.French.Glaff.Storage.csproj", "{E9A422E4-9962-4F09-A8BA-861BD0AD7042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bougle.French.Glaff.Cmd", "Bougle.French.Glaff.Cmd\Bougle.French.Glaff.Cmd.csproj", "{919CC440-2E80-436C-9D9A-65A4ED6B67CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bougle.French.Glaff.Cmd", "Bougle.French.Glaff.Cmd\Bougle.French.Glaff.Cmd.csproj", "{919CC440-2E80-436C-9D9A-65A4ED6B67CD}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0669E8D5-F1A0-4F55-8C27-72DD684794E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{919CC440-2E80-436C-9D9A-65A4ED6B67CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{919CC440-2E80-436C-9D9A-65A4ED6B67CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{919CC440-2E80-436C-9D9A-65A4ED6B67CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0669E8D5-F1A0-4F55-8C27-72DD684794E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0669E8D5-F1A0-4F55-8C27-72DD684794E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0669E8D5-F1A0-4F55-8C27-72DD684794E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0669E8D5-F1A0-4F55-8C27-72DD684794E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

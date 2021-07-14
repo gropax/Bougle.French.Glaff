@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bougle.french.glaff.web:
+    image: ${DOCKER_REGISTRY-}bouglefrenchglaffweb
+    build:
+      context: .
+      dockerfile: Bougle.French.Glaff.Web/Dockerfile

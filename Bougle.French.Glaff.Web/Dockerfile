@@ -8,6 +8,8 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Bougle.French.Glaff.Web/Bougle.French.Glaff.Web.csproj", "Bougle.French.Glaff.Web/"]
+COPY ["Bougle.French.Glaff.Contracts/Bougle.French.Glaff.Contracts.csproj", "Bougle.French.Glaff.Contracts/"]
+COPY ["Bougle.French.Glaff.Storage/Bougle.French.Glaff.Storage.csproj", "Bougle.French.Glaff.Storage/"]
 RUN dotnet restore "Bougle.French.Glaff.Web/Bougle.French.Glaff.Web.csproj"
 COPY . .
 WORKDIR "/src/Bougle.French.Glaff.Web"
