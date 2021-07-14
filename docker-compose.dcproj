@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>0669e8d5-f1a0-4f55-8c27-72dd684794e5</ProjectGuid>
+    <ProjectGuid>32a14555-2296-4832-9d25-bd61e7574b85</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>bougle.french.glaff.web</DockerServiceName>

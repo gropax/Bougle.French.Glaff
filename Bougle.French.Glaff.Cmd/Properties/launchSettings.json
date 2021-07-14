@@ -2,7 +2,7 @@
   "profiles": {
     "Bougle.French.Glaff.Cmd": {
       "commandName": "Project",
-      "commandLineArgs": "..\\..\\..\\..\\data\\glaff.db ..\\..\\..\\..\\data\\glaff-1.2.2.txt ..\\..\\..\\..\\data\\oldiesSubLexicon.txt"
+      "commandLineArgs": "..\\..\\..\\..\\db\\glaff.db ..\\..\\..\\..\\data\\glaff-1.2.2.txt ..\\..\\..\\..\\data\\oldiesSubLexicon.txt"
     }
   }
 }
