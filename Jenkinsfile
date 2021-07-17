@@ -1,10 +1,13 @@
 pipeline {
-  agent any
+  agent {
+    label 'windows'
+  }
+  
   stages {
     stage('Checkout') {
       steps {
         git(url: 'https://github.com/gropax/Bougle.French.Glaff', branch: 'master')
-        sh 'dotnet restore'
+        bat 'dotnet restore'
       }
     }
 
