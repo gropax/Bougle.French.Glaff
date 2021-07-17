@@ -4,7 +4,7 @@ pipeline {
     stage('Checkout') {
       steps {
         git(url: 'https://github.com/gropax/Bougle.French.Glaff', branch: 'master')
-        bat 'dotnet restore'
+        sh 'dotnet restore'
       }
     }
 
