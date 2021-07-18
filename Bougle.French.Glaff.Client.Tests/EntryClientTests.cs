@@ -10,7 +10,6 @@ namespace Bougle.French.Glaff.Client.Tests
         [Fact]
         public async void TestFind()
         {
-            var entry = await _client.Find(1234556);
         }
     }
 }
