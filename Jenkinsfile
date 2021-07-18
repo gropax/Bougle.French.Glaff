@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'windows'
+    label 'dotnet5'
   }
   
   stages {
