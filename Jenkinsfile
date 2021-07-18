@@ -13,9 +13,14 @@ pipeline {
     stage('Build') {
       steps {
         sh 'dotnet restore Bougle.French.Glaff.sln'
-        sh 'dotnet build --configuration Release Bougle.French.Glaff.sln'
+        sh 'dotnet build -c Release Bougle.French.Glaff.sln'
       }
     }
-
+    
+    stage('Tests') {
+      steps {
+        sh 'dotnet test -c Release Bougle.French.Glaff.sln'
+      }
+    }
   }
 }
